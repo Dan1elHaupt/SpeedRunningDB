@@ -1,13 +1,13 @@
-use SpeedRunnerDB
+USE SpeedRunnerDB
 GO
 
-create or alter procedure dbo.uspInsertNewGame (
+CREATE or alter procedure dbo.uspInsertNewGame (
 @game_name nvarchar(120),
 @developer nvarchar(120),
 @publisher nvarchar(120),
 @genre_name varchar(30),
 @category_name nvarchar(60),
-@category_date_created varchar(8),
+@category_date_CREATEd varchar(8),
 @platform_name varchar(20),
 @platform_company varchar(30),
 @platform_release_date date
@@ -15,10 +15,10 @@ create or alter procedure dbo.uspInsertNewGame (
 AS
 BEGIN TRANSACTION InsertGame
 	BEGIN TRY
-		declare @game_id int
-		declare @genre_id int
-		declare @category_id int
-		declare @platform_id int
+		DECLARE @game_id int
+		DECLARE @genre_id int
+		DECLARE @category_id int
+		DECLARE @platform_id int
 
 
 		-- Insert new genre
@@ -32,8 +32,8 @@ BEGIN TRANSACTION InsertGame
 		begin
 		-- Insert new category
 		IF NOT EXISTS (SELECT * FROM dbo.Categories WHERE category_name = @category_name)
-		INSERT INTO dbo.Categories(category_name, date_created)
-		VALUES	(@category_name,@category_date_created)
+		INSERT INTO dbo.Categories(category_name, date_CREATEd)
+		VALUES	(@category_name,@category_date_CREATEd)
 		end
 
 
@@ -46,31 +46,31 @@ BEGIN TRANSACTION InsertGame
 
 
 		-- Get ids of existing entries
-		select @genre_id = genre_id from dbo.Genres where genre_name = @genre_name
-		select @category_id = category_id from dbo.Categories where category_name = @category_name
-		select @platform_id = platform_id from dbo.Platforms where platform_name = @platform_name
+		SELECT @genre_id = genre_id FROM dbo.Genres WHERE genre_name = @genre_name
+		SELECT @category_id = category_id FROM dbo.Categories WHERE category_name = @category_name
+		SELECT @platform_id = platform_id FROM dbo.Platforms WHERE platform_name = @platform_name
 
 
 		-- Insert new game
-		insert into dbo.Games(game_name, developer, publisher)
-		values	(@game_name, @developer, @publisher)
+		INSERT INTO dbo.Games(game_name, developer, publisher)
+		VALUES	(@game_name, @developer, @publisher)
 
-		select @game_id = game_id from dbo.Games where game_name = @game_name
+		SELECT @game_id = game_id FROM dbo.Games WHERE game_name = @game_name
 		
 
 		-- Insert new platform-game link
-		insert into dbo.Game_Platforms(game_id, platform_id)
-		values	(@game_id, @platform_id)
+		INSERT INTO dbo.Game_Platforms(game_id, platform_id)
+		VALUES	(@game_id, @platform_id)
 
 
 		-- Insert new genre-game link
-		insert into dbo.Game_Genres(game_id, genre_id)
-		values	(@game_id, @genre_id)
+		INSERT INTO dbo.Game_Genres(game_id, genre_id)
+		VALUES	(@game_id, @genre_id)
 
 
 		-- Insert new category-game link
-		insert into dbo.Game_Categories(game_id, category_id)
-		values	(@game_id, @category_id)
+		INSERT INTO dbo.Game_Categories(game_id, category_id)
+		VALUES	(@game_id, @category_id)
 
 		COMMIT
 

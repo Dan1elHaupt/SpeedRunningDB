@@ -8,11 +8,11 @@ runner_name,
 category_name,
 run_time,
 video_link,
-case when is_valid=0 then 'false' 
-           else 'true' 
-           end as is_valid
+case when validity=1 then 'true' 
+           else 'false' 
+           end as validity
 FROM dbo.Runs INNER JOIN dbo.Games ON Runs.game_id = Games.game_id INNER JOIN dbo.Categories ON Runs.category_id = Categories.category_id
 	INNER JOIN dbo.Runners on Runs.runner_id = Runners.runner_id
 WHERE Runs.deleted = 0
 
-go
+GO

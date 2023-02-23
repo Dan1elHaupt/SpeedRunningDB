@@ -109,7 +109,7 @@ CREATE TABLE dbo.Runs (
 	game_version varchar(50),
 	date_posted datetime NOT NULL,
 	video_link varchar(100),
-	is_valid bit,
+	validity tinyint,
 	CONSTRAINT [PK_Run] PRIMARY KEY CLUSTERED (
 		run_id ASC
 	)

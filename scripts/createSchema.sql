@@ -97,6 +97,16 @@ CREATE TABLE dbo.Game_Platforms (
 )
 GO
 
+CREATE TABLE dbo.Administrators (
+	administrator_id int identity(1,1) NOT NULL,
+	admin_name nvarchar(60),
+	CONSTRAINT [PK_Admin] PRIMARY KEY CLUSTERED (
+		administrator_id ASC
+	)
+)
+
+GO
+
 CREATE TABLE dbo.Runs (
 	run_id int identity(1,1) NOT NULL,
 	runner_id int foreign key references dbo.Runners(runner_id) NOT NULL,
@@ -110,19 +120,9 @@ CREATE TABLE dbo.Runs (
 	date_posted datetime NOT NULL,
 	video_link varchar(100),
 	validity tinyint NOT NULL,
-	verified_by int NOT NULL,
+	verified_by int foreign key references dbo.Administrators(administrator_id) NOT NULL,
 	CONSTRAINT [PK_Run] PRIMARY KEY CLUSTERED (
 		run_id ASC
 	)
 )
-GO
-
-CREATE TABLE dbo.Administrators (
-	administrator_id int identity(1,1) NOT NULL,
-	admin_name nvarchar(60),
-	CONSTRAINT [PK_Admin] PRIMARY KEY CLUSTERED (
-		administrator_id ASC
-	)
-)
-
 GO

@@ -6,8 +6,8 @@ create or alter function dbo.udfGetFastestRunForGame (
 )
 returns @ReturnTable table(
 			runner_name varchar(50),
-			run_time smallint,
-			video_link varchar(50)
+			run_time int,
+			video_link varchar(100)
 		)
 as
 	begin

@@ -45,7 +45,7 @@ VALUES	(3, 1, 1, 1, 1, 29578, 0, 1.64, '2014-11-11T14:23:25Z', 'http://www.twitc
 		(3, 1, 1, 1, 1, 28235, 0, 1.64, '2015-02-26T14:32:15Z', 'http://www.twitch.tv/torikslv/c/6204504', 1),
 		(2, 1, 1, 6, 1, 6275, 0, 1.64, '2015-02-26T19:21:40Z', 'http://www.twitch.tv/amawolf/c/6205978', 1),
 		(2, 1, 1, 6, 1, 5888, 0, 1.64, '2015-03-01T13:39:51Z', 'http://www.twitch.tv/amawolf/c/6225569', 1),
-		(2, 1, 1, 1, 1, 20020, 0, 1.64, '2015-03-03T04:54:32Z', 'https://www.youtube.com/watch?v=TPmtH1IjfYc&feature=gp-n-y&google_comment_id=z12mjjrpez2kjxxba04cfhwidvfyczzoalk0k', 1),
+		(2, 1, 1, 1, 1, 20020, 0, 1.64, '2015-03-03T04:54:32Z', 'https://www.youtube.com/watch?v=TPmtH1IjfYc&feature=gp-n-y', 1),
 		(3, 1, 1, 6, 1, 5801, 0, 1.64, '2015-03-03T19:07:03Z', 'http://www.twitch.tv/amawolf/c/6242805', 1),
 		(2, 1, 1, 6, 1, 5371, 0, 1.64, '2015-03-06T19:38:26Z', 'http://www.twitch.tv/amawolf/c/6265406', 1),
 		(4, 1, 1, 6, 1, 5163, 0, 1.64, '2015-03-10T12:55:31Z', 'http://www.twitch.tv/amawolf/c/6291653', 1),

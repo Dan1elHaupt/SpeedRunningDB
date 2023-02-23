@@ -160,7 +160,7 @@ VALUES
 	('XboxOne','Microsoft','20131122'),
 	('XboxSeriesS','Microsoft','20201110'),
 	('XboxSeriesX','Microsoft','20201110'),
-	('Switch','Nintendo','20170303'),
+	('Switch','Nintendo','20170303')
 GO
 
 INSERT INTO Regions(region_name, region_abbreviation)

@@ -109,23 +109,22 @@ CREATE TABLE dbo.Runs (
 	game_version varchar(50),
 	date_posted datetime NOT NULL,
 	video_link varchar(100),
-	validity tinyint,
+	validity tinyint NOT NULL,
+	verified_by int NOT NULL,
 	CONSTRAINT [PK_Run] PRIMARY KEY CLUSTERED (
 		run_id ASC
 	)
 )
 GO
 
-CREATE TABLE dbo.Skips (
-	skip_id int identity(1,1) NOT NULL,
-	game_id int foreign key references dbo.Games(game_id) NOT NULL,
-	skip_name nvarchar(120) NOT NULL,
-	skip_description nvarchar(600),
-	date_CREATEd date NOT NULL,
-	CONSTRAINT [PK_Skips] PRIMARY KEY CLUSTERED (
-		skip_id ASC
+CREATE TABLE dbo.Administrators (
+	administrator_id int identity(1,1) NOT NULL,
+	admin_name nvarchar(60),
+	CONSTRAINT [PK_Admin] PRIMARY KEY CLUSTERED (
+		administrator_id ASC
 	)
 )
+
 GO
 
 
@@ -208,4 +207,10 @@ VALUES
 	(2,1),
 	(2,2),
 	(2,4)
+GO
+
+INSERT INTO dbo.Administrators(admin_name)
+VALUES
+	('Bob@admin.com'),
+	('John@admin.com')
 GO

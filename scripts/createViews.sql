@@ -13,5 +13,6 @@ case when is_valid=0 then 'false'
            end as is_valid
 FROM dbo.Runs INNER JOIN dbo.Games ON Runs.game_id = Games.game_id INNER JOIN dbo.Categories ON Runs.category_id = Categories.category_id
 	INNER JOIN dbo.Runners on Runs.runner_id = Runners.runner_id
+WHERE Runs.deleted = 0
 
 go

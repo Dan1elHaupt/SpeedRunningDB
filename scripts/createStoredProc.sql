@@ -81,3 +81,42 @@ BEGIN TRANSACTION InsertGame
 	END CATCH
 
 GO
+
+CREATE or ALTER procedure dbo.uspDeleteRunner (
+@runner_name nvarchar(60)
+)
+AS
+BEGIN TRANSACTION DeleteRunner
+	BEGIN TRY
+		DECLARE @runner_id int
+
+		SELECT @runner_id = runner_id FROM dbo.Runners WHERE runner_name = @runner_name
+
+		UPDATE dbo.Runners SET deleted = 1 WHERE runner_id = @runner_id
+
+		COMMIT
+
+	END TRY
+	BEGIN CATCH
+		ROLLBACK;
+	END CATCH
+
+GO
+
+CREATE or ALTER procedure dbo.uspDeleteRun (
+@run_id int
+)
+AS
+BEGIN TRANSACTION DeleteRun
+	BEGIN TRY
+		
+		UPDATE dbo.Runs SET deleted = 1 WHERE run_id = @run_id
+
+		COMMIT
+
+	END TRY
+	BEGIN CATCH
+		ROLLBACK;
+	END CATCH
+
+GO

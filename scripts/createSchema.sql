@@ -136,7 +136,7 @@ GO
 
 INSERT INTO dbo.Categories(category_name, date_CREATEd)
 VALUES
-	('100%','20100101')
+	('Any%','20100101')
 GO
 
 INSERT INTO dbo.Genres(genre_name)

@@ -10,9 +10,15 @@ platforms = {
   "Nintendo Switch": 9,
 };
 
+// const game = "om1mx362"; //GTA V
+const game = "k6qre01g"; //The Witcher 3
+
+// const category = "wkpn1jdr"; //Any% GTA V
+const category = "jdr7j9n2"; //Any% Witcher 3
+
 async function getResults() {
   const response = await fetch(
-    "https://www.speedrun.com/api/v1/runs?max=200&offset=0&game=k6qre01g"
+    `https://www.speedrun.com/api/v1/runs?max=200&offset=0&game=${game}&category=${category}`
   );
   const data = await response.json();
   for (let i = 0; i < 200; i++) {
@@ -26,7 +32,7 @@ async function getResults() {
         platforms[platform.data.name] !== undefined &&
         data.data[i].videos.links !== undefined
       ) {
-        // console.log(data.data[i].status.status == "verified" ? 1 : 0);
+        // console.log(data.data[i]);
         console.log(
           `(${Math.round(Math.random() * 3 + 1)}, 2, 1, ${
             platforms[platform.data.name]

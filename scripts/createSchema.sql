@@ -134,9 +134,11 @@ GO
 
 
 
-INSERT INTO dbo.Categories(category_name, date_CREATEd)
+INSERT INTO dbo.Categories(category_name, date_created)
 VALUES
-	('Any%','20100101')
+	('Any%','20100101'),
+	('Segments', '20141112'),
+	('Hearts of Stone', '20170706')
 GO
 
 INSERT INTO dbo.Genres(genre_name)
@@ -185,7 +187,9 @@ GO
 INSERT INTO dbo.Game_Categories(game_id, category_id)
 VALUES
 	(1,1),
-	(2,1)
+	(1,2),
+	(2,1),
+	(2,3)
 GO
 
 INSERT INTO dbo.Game_Genres(game_id, genre_id)

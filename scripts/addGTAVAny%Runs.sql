@@ -23,7 +23,7 @@ VALUES	(1, 2, 1, 1, 1, 29578, 0, 4.01, '2014-11-11T14:23:25Z', 'http://www.twitc
 				(2, 2, 1, 5, 1, 31093, 0, 4.01, '2015-02-06T23:22:33Z', 'http://www.twitch.tv/m_tt/c/6056145', 1),
 				(3, 2, 1, 5, 1, 30193, 0, 4.01, '2015-02-22T14:05:27Z', 'http://www.twitch.tv/m_tt/c/6175479', 1),
 				(2, 2, 1, 1, 1, 28235, 0, 4.01, '2015-02-26T14:32:15Z', 'http://www.twitch.tv/torikslv/c/6204504', 1),
-				(3, 2, 1, 1, 1, 20020, 0, 4.01, '2015-03-03T04:54:32Z', 'https://www.youtube.com/watch?v=TPmtH1IjfYc&feature=gp-n-y&google_comment_id=z12mjjrpez2kjxxba04cfhwidvfyczzoalk0k', 1),
+				(3, 2, 1, 1, 1, 20020, 0, 4.01, '2015-03-03T04:54:32Z', 'https://www.youtube.com/watch?v=TPmtH1IjfYc&feature=gp-n-y', 1),
 				(3, 2, 1, 1, 1, 27490, 0, 4.01, '2015-04-15T11:49:51Z', 'http://www.twitch.tv/torikslv/c/6544550', 1),
 				(3, 2, 1, 1, 1, 26398, 0, 4.01, '2015-04-19T12:20:11Z', 'https://www.youtube.com/watch?v=4OGhwlJNuec', 1),
 				(2, 2, 1, 4, 1, 26196, 0, 4.01, '2015-04-19T15:51:11Z', 'http://www.twitch.tv/zoton2/c/6566586', 1),

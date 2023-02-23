@@ -152,14 +152,15 @@ GO
 
 INSERT INTO dbo.Platforms(platform_name, company, release_date)
 VALUES
+	('PS3','Sony','20061111'),
+	('PS4','Sony','20131115'),
 	('PS5','Sony','20201112'),
+	('PC',null,null),
+	('Xbox360','Microsoft','20051122'),
+	('XboxOne','Microsoft','20131122'),
+	('XboxSeriesS','Microsoft','20201110'),
 	('XboxSeriesX','Microsoft','20201110'),
 	('Switch','Nintendo','20170303'),
-	('PC',null,null),
-	('Xbox360','Microsoft','20201110'),
-	('PS3','Sony','20201110'),
-	('XboxOne','Microsoft','20201110'),
-	('PS4','Sony','20201110')
 GO
 
 INSERT INTO Regions(region_name, region_abbreviation)

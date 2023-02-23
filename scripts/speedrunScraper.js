@@ -1,12 +1,13 @@
 platforms = {
-  "Playstation 5": 1,
-  "Xbox Series X": 2,
-  "Nintendo Switch": 3,
+  "PlayStation 3": 1,
+  "PlayStation 4": 2,
+  "PlayStation 5": 3,
   PC: 4,
   "Xbox 360": 5,
-  "PlayStation 3": 6,
-  "Xbox One": 7,
-  "PlayStation 4": 8,
+  "Xbox One": 6,
+  "Xbox Series S": 7,
+  "Xbox Series X": 8,
+  "Nintendo Switch": 9,
 };
 
 async function getResults() {

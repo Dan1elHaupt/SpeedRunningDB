@@ -83,7 +83,6 @@ GO
 
 INSERT INTO dbo.Administrators(admin_name)
 VALUES
-	('not verified'),
 	('Bob@admin.com'),
 	('John@admin.com')
 GO

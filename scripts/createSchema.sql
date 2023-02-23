@@ -120,7 +120,7 @@ CREATE TABLE dbo.Runs (
 	date_posted datetime NOT NULL,
 	video_link varchar(100),
 	validity tinyint NOT NULL,
-	verified_by int foreign key references dbo.Administrators(administrator_id) NOT NULL,
+	verified_by int foreign key references dbo.Administrators(administrator_id),
 	CONSTRAINT [PK_Run] PRIMARY KEY CLUSTERED (
 		run_id ASC
 	)

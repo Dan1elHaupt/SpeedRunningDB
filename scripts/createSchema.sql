@@ -45,8 +45,7 @@ CREATE TABLE dbo.Games (
 	publisher nvarchar(120) NOT NULL,
 	CONSTRAINT [PK_Games] PRIMARY KEY CLUSTERED (
 		game_id ASC
-	),
-	CONSTRAINT AK_game_name UNIQUE(game_name)
+	)
 )
 GO
 
@@ -111,7 +110,7 @@ CREATE TABLE dbo.Runs (
 	date_posted datetime NOT NULL,
 	video_link varchar(100),
 	is_valid bit,
-	CONSTRAINT [PK_Runs] PRIMARY KEY CLUSTERED (
+	CONSTRAINT [PK_Run] PRIMARY KEY CLUSTERED (
 		run_id ASC
 	)
 )
@@ -156,7 +155,9 @@ VALUES
 	('PS5','Sony','20201112'),
 	('XboxSeriesX','Microsoft','20201110'),
 	('Switch','Nintendo','20170303'),
-	('PC',null,null)
+	('PC',null,null),
+	('Xbox360','Microsoft','20201110'),
+	('PS3','Sony','20201110')
 GO
 
 INSERT INTO Regions(region_name, region_abbreviation)

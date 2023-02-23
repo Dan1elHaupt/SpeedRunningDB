@@ -1,13 +1,13 @@
 USE SpeedRunnerDB
 GO
 
-CREATE or alter procedure dbo.uspInsertNewGame (
+CREATE or ALTER procedure dbo.uspInsertNewGame (
 @game_name nvarchar(120),
 @developer nvarchar(120),
 @publisher nvarchar(120),
 @genre_name varchar(30),
 @category_name nvarchar(60),
-@category_date_CREATEd varchar(8),
+@category_date_created varchar(8),
 @platform_name varchar(20),
 @platform_company varchar(30),
 @platform_release_date date
@@ -33,7 +33,7 @@ BEGIN TRANSACTION InsertGame
 		-- Insert new category
 		IF NOT EXISTS (SELECT * FROM dbo.Categories WHERE category_name = @category_name)
 		INSERT INTO dbo.Categories(category_name, date_CREATEd)
-		VALUES	(@category_name,@category_date_CREATEd)
+		VALUES	(@category_name,@category_date_created)
 		end
 
 
@@ -52,6 +52,7 @@ BEGIN TRANSACTION InsertGame
 
 
 		-- Insert new game
+		IF NOT EXISTS (SELECT * FROM dbo.Games WHERE game_name = @game_name)
 		INSERT INTO dbo.Games(game_name, developer, publisher)
 		VALUES	(@game_name, @developer, @publisher)
 

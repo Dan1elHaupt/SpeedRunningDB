@@ -39,12 +39,13 @@ GO
 INSERT INTO Regions(region_name, region_abbreviation)
 VALUES
 	('South Africa', 'RSA')
+	('United Kingdom', 'UK')
 GO
 
 INSERT INTO dbo.Runners(region_id, runner_name, date_started, is_banned)
 VALUES
 	(1,'daned', '20100101',0),
-	(1,'daniels', '20110101',0),
+	(2,'daniels', '20110101',0),
 	(1,'charon', '20120101',0),
 	(1,'danielh', '20130101',0)
 GO

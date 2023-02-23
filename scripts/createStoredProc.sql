@@ -10,7 +10,7 @@ CREATE or ALTER procedure dbo.uspInsertNewGame (
 @category_date_created varchar(8),
 @platform_name varchar(20),
 @platform_company varchar(30),
-@platform_release_date date
+@platform_release_date varchar(8)
 )
 AS
 BEGIN TRANSACTION InsertGame

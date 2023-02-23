@@ -61,7 +61,7 @@ GO
 CREATE TABLE dbo.Categories (
 	category_id int identity(1,1) NOT NULL,
 	category_name nvarchar(60) NOT NULL,
-	date_CREATEd date NOT NULL,
+	date_created date NOT NULL,
 	CONSTRAINT [PK_Categories] PRIMARY KEY CLUSTERED (
 		category_id ASC
 	)

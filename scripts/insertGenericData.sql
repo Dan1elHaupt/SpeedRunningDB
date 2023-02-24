@@ -38,7 +38,7 @@ GO
 
 INSERT INTO Regions(region_name, region_abbreviation)
 VALUES
-	('South Africa', 'RSA')
+	('South Africa', 'RSA'),
 	('United Kingdom', 'UK')
 GO
 
